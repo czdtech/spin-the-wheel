@@ -1,31 +1,4 @@
 {
-  "version": 2,
-  "rewrites": [
-    {
-      "source": "/static/(.*)",
-      "destination": "/static/$1"
-    },
-    {
-      "source": "/(.*\\.(png|jpg|jpeg|gif|ico|svg|webmanifest))",
-      "destination": "/$1"
-    },
-    {
-      "source": "/(.*\\.(mp3|wav|ogg))",
-      "destination": "/$1"
-    },
-    {
-      "source": "/(.*\\.(css|js))",
-      "destination": "/$1"
-    },
-    {
-      "source": "/(.*\\.txt)",
-      "destination": "/$1"
-    },
-    {
-      "source": "/site\\.webmanifest",
-      "destination": "/site.webmanifest"
-    }
-  ],
   "headers": [
     {
       "source": "/static/(.*)",
