@@ -189,7 +189,10 @@
 
         function populateFontSelector() {
             if (!fontFamilySelect) return;
-            fontFamilySelect.innerHTML = '';
+            // Clear existing options safely
+            while (fontFamilySelect.firstChild) {
+                fontFamilySelect.removeChild(fontFamilySelect.firstChild);
+            }
             webSafeFonts.forEach(font => {
                 const option = document.createElement('option');
                 option.value = font;
@@ -256,7 +259,10 @@
 
         function generateCustomColorPickers() {
             if (!customColorPickersContainer) return;
-            customColorPickersContainer.innerHTML = '';
+            // Clear existing content safely
+            while (customColorPickersContainer.firstChild) {
+                customColorPickersContainer.removeChild(customColorPickersContainer.firstChild);
+            }
             for (let i = 0; i < NUM_CUSTOM_COLOR_PICKERS; i++) {
                 const colorInput = document.createElement('input');
                 colorInput.type = 'color';
@@ -335,7 +341,10 @@
 
         function populateThemeSelector() {
             if (!colorThemeSelect) return;
-            colorThemeSelect.innerHTML = '';
+            // Clear existing options safely
+            while (colorThemeSelect.firstChild) {
+                colorThemeSelect.removeChild(colorThemeSelect.firstChild);
+            }
             Object.keys(predefinedColorThemes).forEach(themeKey => {
                 const option = document.createElement('option');
                 option.value = themeKey;
